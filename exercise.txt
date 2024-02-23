@@ -1,0 +1,35 @@
+¡Por supuesto! Aquí tienes un ejercicio de una aplicación Spring Boot que enfrenta la concurrencia:
+
+Supongamos que estás construyendo una aplicación de comercio electrónico donde los usuarios pueden comprar productos. Uno de los requisitos es que la aplicación debe manejar la concurrencia al actualizar el inventario de productos para evitar problemas como la sobreventa o la inconsistencia en los datos del inventario.
+
+### Descripción del ejercicio:
+
+1. **Modelo de datos**:
+   - Tienes una entidad `Producto` que representa un producto en tu tienda en línea. Cada producto tiene un identificador único, un nombre, una cantidad disponible en el inventario y un precio.
+   - También tienes una entidad `Pedido` que representa una orden de compra realizada por un usuario. Cada pedido está asociado a uno o más productos y tiene una cantidad de productos comprados.
+
+2. **Requisitos**:
+   - Cuando un usuario realiza un pedido, la cantidad de productos en el inventario debe actualizarse adecuadamente para reflejar la compra.
+   - La actualización del inventario debe manejar la concurrencia de manera segura para evitar problemas como la sobreventa o la inconsistencia en los datos del inventario.
+
+### Ejercicio:
+
+Implementa una aplicación Spring Boot que cumpla con los siguientes requisitos:
+
+1. Define las entidades `Producto` y `Pedido` con sus respectivas relaciones.
+
+2. Implementa un repositorio para cada entidad para realizar operaciones CRUD en la base de datos.
+
+3. Crea un servicio para manejar la lógica de negocio relacionada con la compra de productos y la actualización del inventario.
+
+4. Utiliza mecanismos de concurrencia en Spring Boot, como bloqueos de escritura (`@Lock`) en métodos críticos para garantizar la consistencia del inventario.
+
+5. Implementa pruebas unitarias y de integración para asegurarte de que el manejo de la concurrencia funcione correctamente.
+
+### Puntos a tener en cuenta:
+
+- Utiliza la anotación `@Transactional` para garantizar la atomicidad de las operaciones de actualización del inventario.
+- Considera el uso de bibliotecas como `@Version` para manejar la concurrencia de manera más eficiente.
+- Asegúrate de que tu aplicación sea escalable y pueda manejar cargas de trabajo concurrentes sin problemas de rendimiento o concurrencia.
+
+Este ejercicio te ayudará a familiarizarte con cómo manejar la concurrencia en una aplicación Spring Boot, lo cual es fundamental para garantizar la integridad y consistencia de los datos en entornos de producción.
