@@ -81,6 +81,13 @@ The project includes unit and integration tests to ensure code quality. To run t
 mvn test
 ```
 
+## Bibliography and Useful Links
+Here you will find a useful resource that was used as a reference during the development of this project:
+
+Baeldung - Understanding JPA Transaction Locks: This article on Baeldung provides valuable insights into Java Persistence API (JPA) transaction locks and their usage.
+Understanding JPA Transaction Locks
+Feel free to explore this resource to enhance your understanding of JPA transaction locks and their application within your Spring Boot project!
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
